@@ -157,7 +157,9 @@
   function reveal() {
     for (var i = pending.length - 1; i >= 0; i--) {
       var r = pending[i].getBoundingClientRect();
-      if (r.top < vh * 0.9 && r.bottom > 0) {
+      // anything at or above the lower edge counts, so a jump to the bottom of
+      // the page does not leave the pictures it skipped still hidden
+      if (r.top < vh * 0.9) {
         pending[i].classList.add('in');
         pending.splice(i, 1);
       }
