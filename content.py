@@ -18,8 +18,9 @@ DISCLAIMER = (
     "change before construction."
 )
 
-# Set True to add links to the other two options in each footer.
-CROSS_LINKS = False
+# True adds links to the other two options in each footer (owner's choice,
+# 2026-11-05). Set False to make each page stand alone again.
+CROSS_LINKS = True
 
 # The plan-view render (03) is the same camera in all three options. These
 # place the circle inside that picture: its center as a fraction of the image

@@ -127,7 +127,10 @@ def build_page(n, template, css, js, clash):
         links = "".join(
             f'<a href="../option-{k}/">Option {k}</a>' for k in sorted(content.OPTIONS) if k != n
         )
-        cross = f'  <p class="foot__others">{links}</p>'
+        cross = (
+            '  <nav class="foot__others" aria-label="The other options">'
+            f"<span>See the other options</span>{links}</nav>"
+        )
 
     ring_text = (f"{content.PARK}  \u2022  Option {n}  \u2022  " * 4).strip()
     # Circle crop: the image is 16:9 and fills the disc's height.

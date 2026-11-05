@@ -206,7 +206,9 @@ html:not(.motion) .band__row{font-size:clamp(2rem,8vw,5rem)}
 .foot__big{font-size:clamp(4rem,19.5vw,15rem);line-height:.86;margin:0 0 .18em -.04em}
 .foot__line{font:600 1.05rem/1.4 "Raleway",sans-serif}
 .foot__note{max-width:44ch;margin-top:.6em;opacity:.86;font-size:.95rem}
-.foot__others{display:flex;gap:1.2em;margin-top:1.6em;font:600 1rem "Raleway",sans-serif}
+.foot__others{display:flex;flex-wrap:wrap;align-items:center;gap:.7em;margin-top:2em;font:600 1rem "Raleway",sans-serif}
+.foot__others span{flex:1 0 100%}
+.foot .foot__others a{padding:.75em 1.3em;border-radius:999px;background:var(--on-a1);color:var(--a1);text-decoration:none}
 .foot a{color:inherit}
 .foot__top{display:inline-block;margin-top:2em;font:600 1rem "Raleway",sans-serif;padding:.75em 1.3em;border:2px solid currentColor;border-radius:999px;text-decoration:none}
 
@@ -353,7 +355,7 @@ html:not(.motion) .band__row{font-size:clamp(2rem,8vw,5rem)}
   <p class="foot__big" aria-hidden="true">Option 1</p>
   <p class="foot__line">Liberty Park playground, option 1 of 3.</p>
   <p class="foot__note">Renderings show design intent. Colors, equipment and site details may change before construction.</p>
-
+  <nav class="foot__others" aria-label="The other options"><span>See the other options</span><a href="../option-2/">Option 2</a><a href="../option-3/">Option 3</a></nav>
   <a class="foot__top" href="#top">Back to the top</a>
 </footer>
 
