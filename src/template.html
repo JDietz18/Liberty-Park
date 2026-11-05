@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{PARK}}, Option {{N}}</title>
+<meta name="description" content="{{LEDE}}">
+<meta name="theme-color" content="{{BG}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{PARK}}, Option {{N}}">
+<meta property="og:description" content="{{HEADLINE}}">
+<meta property="og:image" content="{{SITE}}/img/option-{{N}}/{{HERO0}}-1280.jpg">
+<meta property="og:url" content="{{SITE}}/option-{{N}}/">
+<link rel="icon" href="data:image/svg+xml,{{FAVICON}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../img/option-{{N}}/{{HERO0}}-1920.jpg" imagesrcset="{{HERO0_SRCSET}}" imagesizes="(max-width: 700px) 640px, 120vw">
+<script>document.documentElement.className = 'js' + (matchMedia('(prefers-reduced-motion: reduce)').matches ? '' : ' motion');</script>
+<style>
+@font-face{font-family:"Clash Display";font-weight:500;font-style:normal;font-display:swap;src:url(data:font/woff2;base64,{{CLASH_B64}}) format("woff2")}
+:root{--bg:{{BG}};--panel:{{PANEL}};--ink:{{INK}};--muted:{{MUTED}};--a1:{{A1}};--a2:{{A2}};--a3:{{A3}};--on-a1:{{ON_A1}};--scrim:{{SCRIM}}}
+{{CSS}}
+</style>
+</head>
+<body class="opt-{{N}}" id="top">
+
+<div class="iris" aria-hidden="true"><span class="iris__ring"></span></div>
+
+<header class="bar">
+  <span>{{PARK}}</span>
+  <span>Option {{N}}</span>
+  <i class="bar__progress"></i>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero__slides">
+{{HERO_SLIDES}}
+  </div>
+  <div class="hero__text">
+    <p class="hero__park">{{PARK}}</p>
+    <h1 class="hero__title" data-chars>Option {{N}}</h1>
+    <p class="hero__line">{{HEADLINE}}</p>
+  </div>
+  <div class="hero__ticks" aria-hidden="true">{{HERO_TICKS}}</div>
+  <a class="hero__cue" href="#lede" aria-label="Scroll down to the design"><span></span></a>
+</section>
+
+<section class="lede" id="lede">
+  <p class="lede__text" data-words>{{LEDE}}</p>
+</section>
+
+<section class="wheel" id="plan">
+  <div class="wheel__pin">
+    <div class="wheel__stage">
+      <svg class="wheel__ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ring-path" d="M100,100 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"/></defs>
+        <text><textPath href="#ring-path" textLength="572" lengthAdjust="spacing">{{RING_TEXT}}</textPath></text>
+      </svg>
+      <div class="wheel__disc">
+        <img src="../img/option-{{N}}/{{PLAN}}-1280.jpg" srcset="{{PLAN_SRCSET}}" sizes="(max-width: 700px) 430px, 75vw" width="2560" height="1440" alt="Plan view of option {{N}}: a circular play area divided by paths, with a tree at the center." style="left:{{PLAN_LEFT}}%;top:{{PLAN_TOP}}%">
+      </div>
+      <i class="wheel__pointer" aria-hidden="true"></i>
+    </div>
+    <div class="wheel__copy">
+      <h2>One circle, three play areas</h2>
+      <p class="wheel__sub">Paths cross at the center tree.</p>
+      <ol class="wheel__zones">
+{{ZONES}}
+      </ol>
+      <div class="wheel__ticks" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true">
+  <div class="band__row band__row--fill" data-dir="-1">{{BAND}}</div>
+  <div class="band__row band__row--line" data-dir="1">{{BAND}}</div>
+</div>
+
+<section class="walk" id="walk" style="--n:{{WALK_N}}">
+  <div class="walk__pin">
+    <header class="walk__head">
+      <h2>Walk through it</h2>
+      <p class="walk__count" aria-hidden="true"><b>1</b> / {{WALK_N}}</p>
+    </header>
+    <div class="walk__track">
+{{SCENES}}
+    </div>
+  </div>
+</section>
+
+{{ABOVE}}
+
+<div class="band band--back" aria-hidden="true">
+  <div class="band__row band__row--line" data-dir="1">{{BAND}}</div>
+</div>
+
+<section class="views" id="views">
+  <header class="views__head">
+    <h2 data-rise>Every view</h2>
+    <p>Tap a picture to open it full size.</p>
+  </header>
+  <div class="views__grid">
+{{VIEWS}}
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot__big" aria-hidden="true">Option {{N}}</p>
+  <p class="foot__line">{{PARK}} playground, option {{N}} of 3.</p>
+  <p class="foot__note">{{DISCLAIMER}}</p>
+{{CROSS}}
+  <a class="foot__top" href="#top">Back to the top</a>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Full-size view">
+  <div class="lb__scroll"><img id="lb-img" alt="" width="2560" height="1440"></div>
+  <p class="lb__cap"><b id="lb-n"></b><span id="lb-t"></span></p>
+  <button class="lb__btn lb__x" type="button" aria-label="Close">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lb__btn lb__prev" type="button" aria-label="Previous view">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4l-8 8 8 8"/></svg>
+  </button>
+  <button class="lb__btn lb__next" type="button" aria-label="Next view">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+  </button>
+  <button class="lb__fit" type="button">Fit to screen</button>
+</div>
+
+<script>
+const VIEWS = {{VIEWS_JSON}};
+const IMG_BASE = "../img/option-{{N}}/";
+{{JS}}
+</script>
+</body>
+</html>
